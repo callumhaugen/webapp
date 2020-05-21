@@ -1,0 +1,16 @@
+html
+	head
+		hello
+		<link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Muli">
+		link(rel='stylesheet', href='/css/homepage.css')
+body
+	div(id="quizzes")
+		p
+			each value in questions
+				//button(type='button', id=`${value._id}`) delete
+				button(type='button', class="button",id=`${value._id}`+goToQuiz) Play
+				a(href="/quiz/"+value._id) #{value.creatorname} #[br]
+
+
+	include ../partials/footer
+script(src="/deletefile")

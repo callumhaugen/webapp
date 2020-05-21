@@ -1,0 +1,46 @@
+html
+
+	head
+	<link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Muli">
+	link(rel='stylesheet', href='/css/homepage.css')
+
+body
+
+	div(id="name")
+		|Name
+		input(
+			type="text"
+			id="namer"
+		)
+		|#[br]
+		|Tags
+		input(
+			type="text"
+			id="tags"
+		)
+		|#[br]
+
+		select(form='addProperty', class="form",id="category")
+			each val in questions
+				option(value=val) #{val}
+		select(form='addProperty',class="form",id="difficulty")
+			each val in difficulty
+				option(value=val) #{val}
+
+		button(type="button", class="button", id="search") search
+	p
+		|Questions Available
+	div(id="availableq")
+
+	p
+		|Questions in Quiz#[br]
+	div(id="questionsinquiz")
+	|#[br]
+
+	button(type="button", class="button", id="save") save
+
+	include ../partials/footer
+
+
+
+script(src="/clientfile")

@@ -1,0 +1,140 @@
+h1{
+  text-align: center;
+  color:white;
+}
+.center {
+  margin: auto;
+  width: 45%;
+  padding: 10px;
+  text-align: center;
+}
+
+
+p{
+  text-align: center;
+  font-size: 125%;
+  text-align: center;
+  font-family: Muli;
+  color: white;
+}
+
+
+
+
+.sansserif{
+  font-family: Muli;
+}
+
+body{
+  background-color:#41b3a3;
+}
+
+#footer a:link{
+  background-color: ##E27D60;
+  color:white;
+  padding:14px 25px;
+  text-align: center;
+  font-family: Muli;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 150%;
+
+}
+
+#information a:link{
+  color:#E27D60;
+  font-family: Muli;
+
+}
+
+#quizzes a:visited{
+  color:white;
+}
+#information a:visited{
+  color:#E27D60;
+  text-decoration: underline;
+  font-family: Muli;
+
+}
+
+#footer a:visited{
+  color:#E27D60;
+  text-decoration: none;
+  font-family: Muli;
+  font-size: 100%
+}
+
+#name{
+  display:inline-block;
+}
+.button {
+  background-color: #E27D60; /* Green */
+  border: none;
+  color: white;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-family: Muli;
+  font-size: 16px;
+  width:45px;
+  height:25px;
+
+}
+
+body{
+  color:white;
+  font-size:23px;
+  font-family: Muli;
+  text-align: justify;
+  text-justify:inter-word;
+  padding-right:12px;
+}
+
+#availableq a:visited, a:link{
+  color:#E27D60;
+  text-decoration: none;
+  font-family: Muli;
+}
+
+#questionsInQuiz a:visited, a:link{
+  color:#E27D60;
+  text-decoration: none;
+  font-family: Muli;
+}
+
+#name .button{
+  background-color: #E27D60; /* Green */
+  border: none;
+  color: white;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width:60px;
+  height:25px;
+  vertical-align:top;
+}
+
+.form{
+  width:100%;
+  background-color: white;
+  color:black;
+  font-family: Muli;
+}
+
+#availableq .button{
+  font-family: Muli;
+}
+#availableq a:link{
+  font-family: Muli;
+  color:white;
+}
+
+#questionsinquiz .button{
+  font-family: Muli;
+  width: 65px;
+}
+#questionsinquiz a:link{
+  font-family: Muli;
+  color:white;
+}

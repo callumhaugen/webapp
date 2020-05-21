@@ -1,0 +1,14 @@
+html
+	head
+		title Question page
+body
+	div#main
+		p
+			each val in questions
+				|question: #{val.question} #[br]
+				|category: #{val.category} #[br]
+				|correct_answer: #{val.correct_answer} #[br]
+				|Incorrect answer:#{val.incorrect_answers[0]} , #{val.incorrect_answers[1]}, #{val.incorrect_answers[2]} #[br]
+				|Difficulty : #{val.difficulty}
+
+	include ../partials/footer

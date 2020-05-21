@@ -1,0 +1,17 @@
+html
+	head
+		hello
+body
+	div(id="quiz")
+		p
+			|Creator name :#{creator}
+			|#[br]
+			|questions:
+			each val in questions
+				|#{val}
+				|#[br]
+			|tags:
+			each val in tags
+				|#{val},
+
+		include ../partials/footer
