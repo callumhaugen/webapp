@@ -105,7 +105,7 @@ function main(x) {
       document.getElementById("answersOnPage").appendChild(pagebreak1);
       let radioBtn = document.createElement("INPUT");
       radioBtn.setAttribute("type", "radio");
-		
+
       radioBtn.setAttribute('name', `${questions[i]}`);
       radioBtn.setAttribute('value', `${answers[i][j]}`);
       radioBtn.setAttribute('id', `${answers[i][j]}`);
@@ -314,9 +314,12 @@ function checkTest(questions, answers) {
     }
   }
 
-  let finalscore = document.createTextNode("the final score is " + totalans + " / " + questions.length);
+  let finalscore = "Your final score is " + totalans + " / " + questions.length;
   let pagebreak = document.createElement("BR");
-  document.getElementById("score").appendChild(finalscore);
+console.log(finalscore);
+let temp_html="<p>"+`${finalscore}`+"</p>"
+	var newHTML=temp_html;
+  document.getElementById("score").innerHTML=newHTML;
 }
 
 //puts the check mark or the x mark if they are correct or not

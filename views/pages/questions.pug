@@ -1,8 +1,11 @@
 html
+<link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Muli">
+link(rel='stylesheet', href='/css/homepage.css')
 	head
 		title Question
+
 body
-	div#main
+
 		p
 			each val in questions
 				a(href="/questions/"+val._id) #{val.question} #[br]

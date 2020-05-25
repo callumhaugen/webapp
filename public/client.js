@@ -62,6 +62,7 @@ function searchq(){
                 link.setAttribute('href', `${newlink}`);
                 let linktext=document.createTextNode(`${responseObj.questions[i].question}`);
                 link.appendChild(linktext);
+                
                 link.setAttribute('id', "qintest"+`${responseObj.questions[i]._id}`);
                 let removequestionbutton=document.createElement("BUTTON");
               let removequestionbuttontext=  document.createTextNode("Remove");

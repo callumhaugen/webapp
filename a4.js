@@ -9,6 +9,11 @@ const bodyParser = require('body-parser')
 app.use(bodyParser());
 app.use(express.static('public'));
 
+var DomParser = require('dom-parser');
+var parser = new DomParser();
+var he = require('he');
+
+
 
 
 
@@ -35,6 +40,7 @@ router.get('/questions', function(req, res, next) {
     let response_array = []
     if (category == null && difficulty == null) {
       db.collection("questions").find().limit(25).toArray(function(err, response) {
+
         let response_array = [];
         if (err) {
           throw err;
@@ -44,7 +50,7 @@ router.get('/questions', function(req, res, next) {
         }
         response_array = response
         resobj.questions = response_array;
-        console.log(resobj.questions[0].question.category);
+
         res.render('pages/questions', {
           questions: resobj.questions
         });
@@ -144,7 +150,6 @@ router.get('/questions', function(req, res, next) {
         response_array = response
         resobj.questions = response_array;
         let finalresobj = JSON.stringify(resobj)
-        console.log(finalresobj);
         res.send(finalresobj);
 
       });
@@ -164,7 +169,6 @@ router.get('/questions', function(req, res, next) {
         response_array = response
         resobj.questions = response_array;
         let finalresobj = JSON.stringify(resobj)
-        console.log(finalresobj);
         res.send(finalresobj);
 
       });
@@ -185,9 +189,20 @@ router.get('/questions', function(req, res, next) {
           questions: null
         }
         response_array = response
+
+        for(let i=0; i<response_array.length; i++){
+          let x=he.decode(response_array[i].question);
+          response_array[i].question=x;
+        }
+console.log(response_array);
+
+
+
+
+
         resobj.questions = response_array;
-        let finalresobj = JSON.stringify(resobj)
-        console.log(finalresobj);
+        let finalresobj = JSON.stringify(resobj);
+        console.log("maybe here");
         res.send(finalresobj);
 
       });
@@ -277,17 +292,17 @@ router.get('/createquiz', function(req, res, next) {
       throw err;
     }
     let cats = response;
-    db.collection("questions").distinct("difficulty", function(err, response) {
-      if (err) {
-        throw err;
-      }
+      response=[];
+      response[0]="easy";
+      response[1]="medium";
+      response[2]="hard";
       let filepath = __dirname + "/public/client.js"
       console.log(filepath);
       res.render('pages/createq', {
         questions: cats,
         difficulty: response,
         filepath: filepath
-      });
+      
     });
   });
 });

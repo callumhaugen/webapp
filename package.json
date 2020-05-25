@@ -10,9 +10,12 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "dom-parser": "^0.1.6",
     "express": "^4.17.1",
+    "he": "^1.2.0",
     "mongo": "^0.1.0",
     "mongoose": "^5.9.13",
-    "pug": "^2.0.4"
+    "pug": "^2.0.4",
+    "xmldom": "^0.3.0"
   }
 }

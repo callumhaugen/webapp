@@ -18,6 +18,10 @@ p{
   color: white;
 }
 
+#name p{
+font-size: 30px;
+
+}
 
 
 
@@ -83,7 +87,7 @@ body{
 
 body{
   color:white;
-  font-size:23px;
+  font-size:30px;
   font-family: Muli;
   text-align: justify;
   text-justify:inter-word;
@@ -91,28 +95,33 @@ body{
 }
 
 #availableq a:visited, a:link{
-  color:#E27D60;
+  color:white;
   text-decoration: none;
   font-family: Muli;
+  font-size: 30px;
 }
 
+
+
+
+
 #questionsInQuiz a:visited, a:link{
-  color:#E27D60;
-  text-decoration: none;
   font-family: Muli;
+  color:white;
+  padding-left: 20px;
 }
 
 #name .button{
-  background-color: #E27D60; /* Green */
-  border: none;
-  color: white;
-  text-align: left;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  width:60px;
-  height:25px;
-  vertical-align:top;
+  font-family: Muli;
+  width: 100px;
+  height:50px;
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  border-radius: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .form{
@@ -120,19 +129,42 @@ body{
   background-color: white;
   color:black;
   font-family: Muli;
+  font-size: 25px;
+  color:#41b3a3;
+  background-color: #white;
 }
 
 #availableq .button{
   font-family: Muli;
+  width: 100px;
+  height:50px;
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  border-radius: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+
 }
 #availableq a:link{
   font-family: Muli;
   color:white;
+  padding-left: 20px;
 }
 
 #questionsinquiz .button{
   font-family: Muli;
-  width: 65px;
+  width: 120px;
+  height:50px;
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  border-radius: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 #questionsinquiz a:link{
   font-family: Muli;
