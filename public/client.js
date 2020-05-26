@@ -1,6 +1,7 @@
 let cat;
 let difficulty;
-let search = document.getElementById("search").addEventListener("click", () => searchq());
+let search = document.getElementById("category").addEventListener("change", () => searchq());
+let search1= document.getElementById("difficulty").addEventListener("change", () => searchq());
 let listOfQ=[];
 let jsonList=[];
 //function to add questions when they are serached
@@ -62,7 +63,7 @@ function searchq(){
                 link.setAttribute('href', `${newlink}`);
                 let linktext=document.createTextNode(`${responseObj.questions[i].question}`);
                 link.appendChild(linktext);
-                
+
                 link.setAttribute('id', "qintest"+`${responseObj.questions[i]._id}`);
                 let removequestionbutton=document.createElement("BUTTON");
               let removequestionbuttontext=  document.createTextNode("Remove");

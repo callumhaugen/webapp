@@ -45,6 +45,9 @@ body{
 
 }
 
+#quizzes text{
+  margin: 99px;
+}
 #information a:link{
   color:#E27D60;
   font-family: Muli;
@@ -53,6 +56,7 @@ body{
 
 #quizzes a:visited{
   color:white;
+  margin-top: 20px
 }
 #information a:visited{
   color:#E27D60;
@@ -101,7 +105,9 @@ body{
   font-size: 30px;
 }
 
-
+#quizzes label{
+  color:purple;
+}
 
 
 
@@ -125,13 +131,31 @@ body{
 }
 
 .form{
-  width:100%;
+  width:50%;
   background-color: white;
   color:black;
   font-family: Muli;
   font-size: 25px;
   color:#41b3a3;
+  margin-bottom: 25px;
   background-color: #white;
+  margin-right: 20px;
+}
+
+#quizzes .button{
+  font-family: Muli;
+  width: 100px;
+  height:50px;
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  border-radius: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: inline-grid;
+  margin-right: 45px;
+  vertical-align: top;
 }
 
 #availableq .button{
@@ -147,11 +171,13 @@ body{
   margin-right: 10px;
 
 
+
 }
 #availableq a:link{
   font-family: Muli;
   color:white;
   padding-left: 20px;
+
 }
 
 #questionsinquiz .button{
@@ -169,4 +195,64 @@ body{
 #questionsinquiz a:link{
   font-family: Muli;
   color:white;
+}
+
+#UserQuestion .button{
+  font-family: Muli;
+  width: 120px;
+  height:50px;
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  border-radius: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+#UserQuestion label{
+  width: 300px;
+  display: inline-block;
+}
+#name label{
+  width: 100px;
+  display: inline-block;
+}
+
+#UserQuestion .button{
+  font-family: Muli;
+  width: 120px;
+  height:65px;
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  border-radius: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#UserQuestion .form{
+  width:50%;
+  background-color: white;
+  color:black;
+  margin-left: 25px;
+  align-self: center;
+  font-family: Muli;
+  font-size: 25px;
+  color:#41b3a3;
+  background-color: #white;
+}
+
+#savebutton .button{
+  font-family: Muli;
+  width: 120px;
+  height:65px;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  border-radius: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
