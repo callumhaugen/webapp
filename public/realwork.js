@@ -105,7 +105,6 @@ function main(x) {
       document.getElementById("answersOnPage").appendChild(pagebreak1);
       let radioBtn = document.createElement("INPUT");
       radioBtn.setAttribute("type", "radio");
-
       radioBtn.setAttribute('name', `${questions[i]}`);
       radioBtn.setAttribute('value', `${answers[i][j]}`);
       radioBtn.setAttribute('id', `${answers[i][j]}`);
@@ -218,9 +217,11 @@ document.getElementById("answersOnPage").innerHTML="this quiz has no questions";
 
       document.getElementById("answersOnPage").appendChild(radioBtn);
       //console.log(radioBtn);
-
+			let label= document.createElement("Label");
+			label.setAttribute("for",`${answers[i][j]}`);
+			label.innerHTML=`${answers[i][j]}`;
       let answerText = document.createTextNode(`${answers[i][j]}`);
-      document.getElementById("answersOnPage").appendChild(answerText);
+      document.getElementById("answersOnPage").appendChild(label);
       document.getElementById("answersOnPage").appendChild(pagebreak);
 
     }

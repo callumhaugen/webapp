@@ -12,6 +12,9 @@ app.use(express.static('public'));
 var DomParser = require('dom-parser');
 var parser = new DomParser();
 var he = require('he');
+const mongoose=require("mongoose");
+const Question =require("./QuestionModel.js")
+
 
 
 
@@ -302,7 +305,7 @@ router.get('/createquiz', function(req, res, next) {
         questions: cats,
         difficulty: response,
         filepath: filepath
-      
+
     });
   });
 });
@@ -539,6 +542,17 @@ router.get('/quizJson/:quizID', function (req, res, next)
   });
 
 });
+
+router.get('/createquestion', function(req, res, next){
+res.render("pages/createQuestion");
+});
+
+router.post('/createquestion', function(req, res, next){
+console.log(req.body);
+db.collection("questions").insertOne(req.body);
+res.send(200);
+});
+
 
 app.use('/', router);
 app.use(express.static('public'));

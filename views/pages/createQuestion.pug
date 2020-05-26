@@ -1,0 +1,32 @@
+html
+  head
+  <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Muli">
+  <link rel='stylesheet', href='/css/homepage.css'>
+
+  body
+    div(id="UserQuestion")
+      <label for="question">Question</label>
+      input(type="text", id="question", class ="form", name="question")
+      |#[br]
+
+      <label for="difficulty ">Difficulty </label>
+      input(type="text", id="difficulty ", class ="form", name="difficulty ")
+      |#[br]
+      <label for="Correct Answer">Correct Answer</label>
+      input(type="text", id="Correct Answer", class ="form", name="Correct Answer")
+      |#[br]
+      <label for="Incorrect1">Incorrect Answer 1</label>
+      input(type="text", id="Incorrect1", class ="form", name="Incorrect1")
+      |#[br]
+      <label for="Incorrect2">Incorrect Answer 2</label>
+      input(type="text", id="Incorrect2", class ="form", name="Incorrect2")
+      |#[br]
+      <label for="Incorrect3">Incorrect Answer 3</label>
+      input(type="text", id="Incorrect3", class ="form", name="Incorrect3")
+      |#[br]
+
+
+      |#[br]
+      button(type="button", class="button", id="save") Publish Question
+  script(src="/MakeQuestion.js")
+  include ../partials/footer

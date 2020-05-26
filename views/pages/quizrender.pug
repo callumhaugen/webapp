@@ -5,11 +5,14 @@ html
 		link(rel='stylesheet', href='/css/homepage.css')
 body
 	div(id="quizzes")
-		p
 			each value in questions
 				//button(type='button', id=`${value._id}`) delete
+
 				button(type='button', class="button",id=`${value._id}`+goToQuiz) Play
-				a(href="/quiz/"+value._id) #{value.creatorname} #[br]
+
+				lable(for=`${value._id}`+goToQuiz, class="lable") #{value.creatorname}
+				a(href="/quiz/"+value._id)
+				|#[br]
 
 
 	include ../partials/footer

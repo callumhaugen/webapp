@@ -7,16 +7,19 @@ html
 body
 
 	div(id="name")
-		|Name
+		<label for="namer">Name</label>
 		input(
 			type="text"
+			class="form"
 			id="namer"
 		)
+
 		|#[br]
-		|Tags
+		<label for="tags">Tags</label>
 		input(
 			type="text"
 			id="tags"
+			class="form"
 		)
 		|#[br]
 
@@ -27,7 +30,6 @@ body
 			each val in difficulty
 				option(value=val) #{val}
 
-		button(type="button", class="button", id="search") search
 	#QuestionsAv
 		p
 		|Questions Available
@@ -39,7 +41,8 @@ body
 	div(id="questionsinquiz")
 	|#[br]
 
-	button(type="button", class="button", id="save") save
+	#savebutton
+		button(type="button", class="button", id="save") save
 
 	include ../partials/footer
 
