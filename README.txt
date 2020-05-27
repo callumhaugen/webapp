@@ -1,9 +1,4 @@
-Callum Haugen
-101102867
 
-
-
-If the mongo daemon is running and the database-intitalizer.js has ran, the program should work with http://localhost:3000
 
 /questions shows questions, supports difficulty and category as query parameters
 /quesitons/[qId] will show a questions with a specific id
